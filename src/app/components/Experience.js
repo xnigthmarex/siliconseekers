@@ -1,12 +1,15 @@
 "use client"
 import React, { useState, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas ,extend } from "@react-three/fiber";
 import { OrbitControls , KeyboardControls } from "@react-three/drei";
 import { Perf } from "r3f-perf";
+import { Effects } from "@react-three/drei";
+import { UnrealBloomPass } from "three-stdlib";
 import { LoadingScreen } from "./Loading";
 import Stars from "./Stars";
 import * as THREE from "three";
 
+extend({ UnrealBloomPass });
 
 export default function App() {
   const [started, setStarted] = useState(false);
@@ -22,7 +25,10 @@ export default function App() {
     <div className="h-screen w-screen">
       <LoadingScreen started={started} setStarted={setStarted} />
       <Canvas camera={{ fov: 60, position: [4, -1, 2.3] }}>
-        <ambientLight intensity={1} />
+        <Effects disableGamma>
+          <unrealBloomPass attachArray="passes" args={[undefined, 3, 1, 0.5]} />
+        </Effects>
+
         <Stars />
 
         <primitive object={gridX} />
@@ -32,9 +38,10 @@ export default function App() {
           <boxGeometry args={[0.5, 0.5, 0.5]} />
           <meshStandardMaterial color="orange" />
         </mesh>
-
-        <OrbitControls enableDamping={true} minDistance={2} maxDistance={6} />
+      <OrbitControls/>
+        {/* <OrbitControls enableDamping={true} minDistance={2} maxDistance={6} /> */}
         <Perf position="bottom-right" style={{ margin: 10 }} />
+        
       </Canvas>
     </div>
   );

@@ -1,30 +1,16 @@
-"use client"
+"use client";
 import { useProgress } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
 export const LoadingScreen = ({ started, setStarted }) => {
-  const [progress, setProgress] = useState(0);
+  const { progress } = useProgress();
 
   useEffect(() => {
-    let interval;
-
-    if (progress < 100) {
-      interval = setInterval(() => {
-        setProgress((prevProgress) => {
-          const newProgress = prevProgress + 4;
-          return newProgress > 100 ? 100 : newProgress;
-        });
-      }, 10);
-    } else {
-      clearInterval(interval);
+    if (progress === 100) {
       setTimeout(() => {
         setStarted(true);
-      }, 1500);
+      }, 500);
     }
-
-    return () => {
-      clearInterval(interval);
-    };
   }, [progress, setStarted]);
 
   return (
