@@ -1,32 +1,23 @@
 "use client";
 import React from "react";
 import { useRef } from "react";
+import auth from "./ServerActions";
 
 export default function Home() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const SigninWithEmail = async (e) => {
-    e.preventDefault();
-    console.log(emailRef.current?.value);
-    console.log(passwordRef.current?.value);
-    const result = await signIn("credentials", {
-      redirect: true,
-      email: emailRef.current?.value,
-      password: passwordRef.current?.value,
-      callbackUrl: "/",
-    });
-  };
-  const SigninWithGoogle = async (e) => {
-    e.preventDefault();
-    const result = await signIn("google", {
-      redirect: true,
-      callbackUrl: "/",
-    });
-  };
+  
+  const SignInHandler = (e) => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    
+  }
+  
   return (
     <div className="h-screen w-screen">
-      {/* <img className="w-full h-full" src="/background.png" alt="logo" /> */}
-      <section className="bg-gray-50 dark:bg-gray-900">
+      <section className=" bg-gray-50 dark:bg-gray-900">
+
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <a
             href="#"
@@ -104,8 +95,9 @@ export default function Home() {
                   </a>
                 </div>
                 <button
+              
                   className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 bg-blue-700"
-                  onClick={SigninWithEmail}
+                  onClick={SignInHandler}
                 >
                   Sign in with Email
                 </button>

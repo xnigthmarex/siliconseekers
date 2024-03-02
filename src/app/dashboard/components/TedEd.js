@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Todo from "./Todo";
 
 export default function Home() {
   const start = () => {
@@ -7,10 +8,8 @@ export default function Home() {
   };
 
   return (
-    <div className="absolute">
-      <button className="pt-20" onClick={() => start()}>
-        TedEd
-      </button>
+    <div className="absolute pt-20 w-screen  flex items-center justify-center">
+      <Todo></Todo>
     </div>
   );
 }

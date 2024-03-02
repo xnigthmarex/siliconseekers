@@ -1,7 +1,6 @@
 "use client";
 import React, { startTransition } from "react";
-import { Html } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import Todo from "./Todo";
 
 export default function Home() {
   const start = () => {
@@ -9,10 +8,16 @@ export default function Home() {
   };
 
   return (
-    <div className="absolute">
-      <button className="pt-20" onClick={() => start()}>
-        tessdafhkjashdsfgjdsgdkljhkjt
-      </button>
+    
+    <div className="absolute w-screen   grid grid-cols-3 mt-20 ">
+        <div className = "col-start-1">
+          <Todo></Todo>
+        </div>
+
+        <div className = "col-span-2">
+          
+        </div>
     </div>
+    
   );
 }
