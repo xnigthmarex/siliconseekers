@@ -33,8 +33,6 @@ model Todo {
   id Int @id @default(autoincrement())
   title String
   body String?
-<<<<<<< Updated upstream
-=======
   Taskdone Boolean @default(false)
 }
 
@@ -48,5 +46,4 @@ model Journal {
 model calendar {
   id Int @id @default(autoincrement())
   
->>>>>>> Stashed changes
 }
