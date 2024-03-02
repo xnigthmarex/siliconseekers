@@ -1,8 +1,12 @@
 
-import { Vollkorn_SC } from "next/font/google";
+import { Vollkorn } from "next/font/google";
 import "./global.css";
 
-const vc = Vollkorn_SC({ subsets: ["latin"]});
+const vc = Vollkorn({
+  weight: ["400", "900"],   
+  display: "swap",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "TrackWell",
