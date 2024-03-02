@@ -7,9 +7,7 @@ import Dashboard from "./Dashboard";
 import Journal from "./Journal";
 import Pomodoro from "./Pomodoro";
 import TedEd from "./TedEd";
-import { Victor_Mono } from "next/font/google";
 
-const victor_mono = Victor_Mono({ subsets: ["latin"] });
 
 
 export default function TabsComp() {
@@ -34,7 +32,7 @@ export default function TabsComp() {
   }, []);
 
   return (
-    <Html style={{ position: "absolute", ...tabsPosition, color: "white" }} className={victor_mono.className}>
+    <Html style={{ position: "absolute", ...tabsPosition, color: "white" }} >
       <div className="h-screen w-screen font-mono">
         <div className="absolute grid grid-cols-3 w-screen">
         
@@ -46,7 +44,7 @@ export default function TabsComp() {
             {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
           </h1>
           <h1 className="text-3xl col-start-3 flex items-center justify-end text-blue-200 glow-text font-semibold">
-            Welcome Aryan
+            Welcome USER
           </h1>
         </div>
 
