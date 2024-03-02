@@ -5,7 +5,7 @@ export default function Todo() {
     const inputRef = useRef(null);
     
     const Addtest = () => {
-        console.log(inputRef.current.value);
+        
     }
     
     return (
