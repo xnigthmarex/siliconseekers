@@ -33,7 +33,4 @@ model Todo {
   id Int @id @default(autoincrement())
   title String
   body String?
-  Taskdone Boolean
-  author User @relation(fields: [authorId], references: [id])
-  authorId Int
 }
