@@ -1,20 +1,81 @@
-"use client";
-import React, { startTransition } from "react";
-import Todo from "./Todo";
-export default function Home() {
-  const start = () => {
-    console.log("tesdsdfaaajournalhjksdht");
+import React, { useState } from 'react';
+
+
+const JournalApp = () => {
+  const [entries, setEntries] = useState([]);
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const handleBodyChange = (event) => {
+    setBody(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (title.trim() === '' || body.trim() === '') {
+      alert('Please fill in both title and body.');
+      return;
+    }
+    const newEntry = {
+      id: Date.now(),
+      title,
+      body
+    };
+    setEntries([...entries, newEntry]);
+    setTitle('');
+    setBody('');
+  };
+
+  const handleDelete = (id) => {
+    const updatedEntries = entries.filter(entry => entry.id !== id);
+    setEntries(updatedEntries);
   };
 
   return (
-    <div className="absolute w-screen   grid grid-cols-3 mt-20 ">
-        <div className = "col-start-1">
-          <Todo></Todo>
+    <div className="journal-app-container">
+      <div className="journal-app">
+        <h1>My Journal</h1>
+        <div className="entry-form">
+          <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label>Title:</label>
+              <input
+                type="text"
+                placeholder="Title"
+                value={title}
+                onChange={handleTitleChange}
+              />
+            </div>
+            <div className="input-group">
+              <label>Body:</label>
+              <textarea
+                placeholder="Body"
+                value={body}
+                onChange={handleBodyChange}
+              />
+            </div>
+            <button type="submit">Add Entry</button>
+          </form>
         </div>
-
-        <div className = "col-span-2">
-          
+        <div className="entries">
+          <h2>Entries</h2>
+          <ul>
+            {entries.map(entry => (
+              <li key={entry.id}>
+                <h3>{entry.title}</h3>
+                <p>{entry.body}</p>
+                <button onClick={() => handleDelete(entry.id)}>Delete</button>
+              </li>
+            ))}
+          </ul>
         </div>
+      </div>
     </div>
   );
-}
+};
+
+export default JournalApp;
