@@ -5,6 +5,9 @@ import { useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import Dashboard from "./Dashboard";
 import Journal from "./Journal";
+import Pomodoro from "./Pomodoro";
+import TedEd from "./TedEd";
+
 
 export default function TabsComp() {
   const { size } = useThree(); 
@@ -24,7 +27,9 @@ export default function TabsComp() {
     <Html style={{ position: "absolute", ...tabsPosition, color: "white" }}>
       <div className="h-screen w-screen font-mono">
         <div className="absolute grid grid-cols-3 w-screen">
+        
           <h1 className="text-3xl col-start-1 flex items-center justify-start text-text-blue-200 ml-3 glow-text font-extrabold">
+          <img className="w-12 h-10 mr-2 bg-white rounded-lg" src="/logo.png" alt="logo" />
             TRACKWELL
           </h1>
           <h1 className="text-3xl col-start-2 flex items-center justify-center mt-1 glow-text font-semibold ">
@@ -75,7 +80,7 @@ export default function TabsComp() {
                 onClick={() => handleTabClick("teded")}
               >
                 <button className="w-full text-lg glow-text text-green-200 font-extrabold">
-                  TODO
+                  TED-ED
                 </button>
               </div>
               
@@ -84,8 +89,8 @@ export default function TabsComp() {
         </div>
         {activeTab === "dashboard" && <Dashboard />}
         {activeTab === "journal" && <Journal />}
-        {activeTab === "pomodoro" && <Dashboard />}
-        {activeTab === "teded" && <Journal />}
+        {activeTab === "pomodoro" && <Pomodoro />}
+        {activeTab === "teded" && <TedEd />}
       </div>
     </Html>
   );
