@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+   
 }
 .glow-text {
   text-shadow: 0 0 20px rgba(0, 150, 255, 1), 
@@ -72,9 +73,9 @@ body {
   left: 70%;
   transform: translate(-50%, -50%);
   border: 2px solid green;
-  border-radius: 40px
-
-
+  border-radius: 40px;
+  background-color: black;
+  opacity: 80%;
 }
 
 
@@ -89,6 +90,9 @@ body {
   left: 30%;
   transform: translate(-50%, -50%);
   border: 2px solid red;
+  background-color: black;
+  opacity: 80%;
+
  
 }
 
