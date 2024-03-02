@@ -55,3 +55,7 @@ body {
   background-size: 200% 100%;
   background-position: -100% 0;
 }
+
+.round-images{
+  border-radius: 50%;
+}
