@@ -1,0 +1,377 @@
+/* Desktop - 1 */
+
+position: relative;
+width: 1440px;
+height: 1080px;
+
+background: url(6SpaceBG.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 1080px;
+height: 650px;
+left: 180px;
+top: 215px;
+
+background: #F8F8F8;
+border-radius: 100px;
+
+
+/* Sign in Button */
+
+position: absolute;
+width: 313.97px;
+height: 41.31px;
+left: 289.03px;
+top: 639.3px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 313.97px;
+height: 41.31px;
+left: 289.03px;
+top: 639.3px;
+
+background: #EA454C;
+box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+border-radius: 12px;
+
+
+/* Sign in */
+
+position: absolute;
+width: 51.64px;
+height: 21.69px;
+left: 420.2px;
+top: 650.66px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Email Form */
+
+position: absolute;
+width: 315px;
+height: 69.2px;
+left: 288px;
+top: 427.57px;
+
+
+
+/* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 313.97px;
+height: 41.31px;
+left: 289.03px;
+top: 455.46px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+
+
+/* Enter your email */
+
+position: absolute;
+width: 138.39px;
+height: 23.75px;
+left: 294.2px;
+top: 466.82px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #636364;
+
+
+
+/* Email */
+
+position: absolute;
+width: 42.34px;
+height: 21.69px;
+left: 288px;
+top: 427.57px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+
+/* Password Form */
+
+position: absolute;
+width: 313.97px;
+height: 69.2px;
+left: 289.03px;
+top: 518.46px;
+
+
+
+/* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 313.97px;
+height: 41.31px;
+left: 289.03px;
+top: 546.34px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+
+
+/* ********** */
+
+position: absolute;
+width: 93.98px;
+height: 23.75px;
+left: 294.2px;
+top: 557.7px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #636364;
+
+
+
+/* Password */
+
+position: absolute;
+width: 74.36px;
+height: 21.69px;
+left: 289.03px;
+top: 518.46px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+
+/* Headline */
+
+position: absolute;
+width: 313.97px;
+height: 75.39px;
+left: 289.03px;
+top: 315px;
+
+
+
+/* Welcome back */
+
+position: absolute;
+width: 290.21px;
+height: 65.07px;
+left: 289.03px;
+top: 315px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 51px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #030303;
+
+
+
+/* Welcome back! Please enter your details. */
+
+position: absolute;
+width: 313.97px;
+height: 21.69px;
+left: 289.03px;
+top: 368.7px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #636364;
+
+
+
+/* Remember & Forgot */
+
+position: absolute;
+width: 308.8px;
+height: 18.59px;
+left: 294.2px;
+top: 609.34px;
+
+
+
+/* Forgot password */
+
+position: absolute;
+width: 110.51px;
+height: 18.59px;
+left: 492.49px;
+top: 609.34px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+
+/* Remember me */
+
+position: absolute;
+width: 98.11px;
+height: 18.59px;
+left: 314.85px;
+top: 609.34px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+
+/* Rectangle 4 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 14.46px;
+height: 13.43px;
+left: 294.2px;
+top: 611.41px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+
+
+/* Icon/name */
+
+position: absolute;
+width: 580px;
+height: 100px;
+left: 430px;
+top: 78px;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 580px;
+height: 100px;
+left: 430px;
+top: 78px;
+
+background: #F8F8F8;
+border-radius: 100px;
+
+
+/* TrackWell Logo 1 */
+
+position: absolute;
+width: 72px;
+height: 58.25px;
+left: 449px;
+top: 99px;
+
+background: url(TrackWell Logo.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 100px;
+
+
+/* TrackWell */
+
+position: absolute;
+width: 431px;
+height: 40px;
+left: 521px;
+top: 108px;
+
+font-family: 'Vollkorn SC';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 40px;
+/* identical to box height, or 80% */
+text-align: center;
+letter-spacing: 0.2em;
+
+color: #3A0044;
+
+
+
+/* raf,360x360,075,t,fafafa_ca443f4786 1 */
+
+position: absolute;
+width: 540px;
+height: 650px;
+left: 720px;
+top: 215px;
+
+background: url(raf,360x360,075,t,fafafa_ca443f4786.jpg);
+mix-blend-mode: darken;
+border-radius: 100px;
