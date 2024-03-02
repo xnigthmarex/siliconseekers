@@ -1,8 +1,10 @@
-import Experience from '@/app/components/Experience';
+"use client";
+import React, { useState, useEffect } from "react";
+
 export default function Home() {
+
   return (
     <>
-      <Experience />
     </>
-  )
+  );
 }

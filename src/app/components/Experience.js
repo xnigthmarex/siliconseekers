@@ -1,17 +1,14 @@
 "use client"
-import React, { useState, useRef } from "react";
-import { Canvas ,extend } from "@react-three/fiber";
-import { OrbitControls , KeyboardControls } from "@react-three/drei";
+import React, { useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Bloom } from "@react-three/postprocessing";
 import { Perf } from "r3f-perf";
-import { Effects } from "@react-three/drei";
-import { UnrealBloomPass } from "three-stdlib";
+import Space from "./models/space";
+import Tabs from "@/app/components/Tabs"; 
 import { LoadingScreen } from "./Loading";
-import Stars from "./Stars";
 import * as THREE from "three";
 
-extend({ UnrealBloomPass });
-
-export default function App() {
+export default function App({children}) {
   const [started, setStarted] = useState(false);
   const size = 10;
   const divisions = 10;
@@ -21,28 +18,18 @@ export default function App() {
 
   gridX.rotation.x = Math.PI / 2;
   gridZ.rotation.z = Math.PI / 2;
+
+ 
+
   return (
-    <div className="h-screen w-screen">
+    <>
       <LoadingScreen started={started} setStarted={setStarted} />
-      <Canvas camera={{ fov: 60, position: [4, -1, 2.3] }}>
-        <Effects disableGamma>
-          <unrealBloomPass attachArray="passes" args={[undefined, 3, 1, 0.5]} />
-        </Effects>
-
-        <Stars />
-
-        <primitive object={gridX} />
-        <primitive object={gridY} />
-        <primitive object={gridZ} />
-        <mesh>
-          <boxGeometry args={[0.5, 0.5, 0.5]} />
-          <meshStandardMaterial color="orange" />
-        </mesh>
-      <OrbitControls/>
-        {/* <OrbitControls enableDamping={true} minDistance={2} maxDistance={6} /> */}
-        <Perf position="bottom-right" style={{ margin: 10 }} />
+      <Canvas camera={{ fov: 50, position: [-2, 0, 4] }}>
+        <Bloom luminanceThreshold={2} luminanceSmoothing={3} />
+        <Tabs />
         
+        <Space />
       </Canvas>
-    </div>
+    </>
   );
 }
