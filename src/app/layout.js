@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import { Victor_Mono } from "next/font/google";
 import "./global.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const victor_mono = Victor_Mono({ subsets: ["latin"] });
 
 export const metadata = {
