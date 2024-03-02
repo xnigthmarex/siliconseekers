@@ -53,24 +53,24 @@ export default function Pomodoro() {
             <div className="item">Pomodoro</div>
             <div className="item">Break</div>
           </div>
+          <div className="pomodoro-container">
+            <div className="timer bigger-timer">
+              {timerMinutes}:{timerSeconds}
+            </div>
+            <div>
+              {!isRunning ? (
+                <button onClick={startTimer} className="message transparent-button" style={{ marginRight: '10px' }}>Start</button>
+              ) : (
+                <button onClick={pauseTimer} className="message transparent-button" style={{ marginRight: '10px' }}>Pause</button>
+              )}
+              <button onClick={resetTimer} className="message transparent-button">Reset</button>
+            </div>
+          </div>
         </div>
         <div className="square">
           <div className="text">
             <h>Task History</h>
           </div>
-        </div>
-      </div>
-      <div className="pomodoro" style={{ position: 'absolute', bottom: '110px', right: '740px' }}>
-        <div className="timer">
-          {timerMinutes}:{timerSeconds}
-        </div>
-        <div>
-          {!isRunning ? (
-            <button onClick={startTimer} className="message" style={{ marginRight: '10px' }}>Start</button>
-          ) : (
-            <button onClick={pauseTimer} className="message" style={{ marginRight: '10px' }}>Pause</button>
-          )}
-          <button onClick={resetTimer} className="message">Reset</button>
         </div>
       </div>
     </>
