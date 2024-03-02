@@ -1,6 +1,7 @@
 "use client";
 import React, { startTransition } from "react";
 import Todo from "./Todo";
+import Calendar from "./Calander";
 
 export default function Home() {
   const start = () => {
@@ -15,7 +16,7 @@ export default function Home() {
         </div>
 
         <div className = "col-span-2">
-          
+          <Calendar></Calendar>
         </div>
     </div>
     
