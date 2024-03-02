@@ -24,7 +24,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  
 }
 .glow-text {
   text-shadow: 0 0 20px rgba(0, 150, 255, 1), 

@@ -7,6 +7,9 @@ import Dashboard from "./Dashboard";
 import Journal from "./Journal";
 import Pomodoro from "./Pomodoro";
 import TedEd from "./TedEd";
+import { Victor_Mono } from "next/font/google";
+
+const victor_mono = Victor_Mono({ subsets: ["latin"] });
 
 
 export default function TabsComp() {
@@ -31,7 +34,7 @@ export default function TabsComp() {
   }, []);
 
   return (
-    <Html style={{ position: "absolute", ...tabsPosition, color: "white" }}>
+    <Html style={{ position: "absolute", ...tabsPosition, color: "white" }} className={victor_mono.className}>
       <div className="h-screen w-screen font-mono">
         <div className="absolute grid grid-cols-3 w-screen">
         
