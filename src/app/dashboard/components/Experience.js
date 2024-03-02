@@ -7,6 +7,9 @@ import Space from "./models/space";
 import Tabs from "@/app/dashboard/components/Tabs"; 
 import { LoadingScreen } from "./Loading";
 import * as THREE from "three";
+import { Victor_Mono } from "next/font/google";
+
+const victor_mono = Victor_Mono({ subsets: ["latin"] });
 
 export default function App({children}) {
   const [started, setStarted] = useState(false);
@@ -26,7 +29,7 @@ export default function App({children}) {
       <LoadingScreen started={started} setStarted={setStarted} />
       <Canvas camera={{ fov: 50, position: [-2, 0, 4] }}>
         <Bloom luminanceThreshold={2} luminanceSmoothing={3} />
-        <Tabs />
+        <Tabs className={victor_mono.className}/>
         
         <Space />
       </Canvas>
